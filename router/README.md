@@ -17,5 +17,5 @@ const { push } = useRouter();
 ```
 <br><br>
 구현하면서 고민한 자세한 내용은 아래 링크에 정리해두었습니다. <br><br>
-https://velog.io/@hmmxmm/React%EB%A1%9C-%EA%B0%84%EB%8B%A8%ED%95%9C-SPA-Router-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0
+- [React로 간단한 SPA Router 구현하기](https://velog.io/@hmmxmm/React%EB%A1%9C-%EA%B0%84%EB%8B%A8%ED%95%9C-SPA-Router-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0)
 
