@@ -1,13 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Router({ children }) {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
-  const updatePath = () => {
-    setCurrentPath(window.location.pathname);
-  };
+  useEffect(() => {
+    const updatePath = () => {
+      setCurrentPath(window.location.pathname);
+    };
 
-  window.addEventListener("popstate", updatePath);
+    window.addEventListener("popstate", updatePath);
+
+    return () => {
+      window.removeEventListener("popstate", updatePath);
+    };
+  }, []);
 
   return (
     <div>{children.filter((child) => currentPath === child.props.path)}</div>
