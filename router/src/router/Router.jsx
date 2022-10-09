@@ -16,7 +16,7 @@ function Router({ children }) {
   }, []);
 
   return (
-    <div>{children.filter((child) => currentPath === child.props.path)}</div>
+    <div>{children.find((child) => currentPath === child.props.path)}</div>
   );
 }
 
